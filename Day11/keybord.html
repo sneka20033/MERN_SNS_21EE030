@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Phone Keyboard</title>
+    <style>
+        input {
+            height: 50px;
+            width: 200px;
+            border:2px;
+            margin-bottom: 1px;
+            text-align: right;
+            font-size: 60px;
+            grid-template-columns:10,1fr ;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color:blanchedalmond;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(panda.jpg);
+        }
+        
+        .keyboard {
+            display: grid;
+            grid-template-columns: repeat(9, 4fr);
+            grid-gap: 5px;
+            padding: 10px;
+            background-color: white;
+        
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .button{
+            background-color: #ddd;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+    
+        }
+        
+        .key:active {
+            background-color: #bbbbbb00;
+        }
+        .space {
+            grid-column: span 3;
+        }
+        .Send {
+            grid-column: span 1;
+        }
+    </style>
+</head>
+
+
+    
+
+<body>
+   
+    <div class="keyboard">
+        <button class="button" onclick="appendToDisplay('Q')">Q</button>
+        <button class="button" onclick="appendToDisplay('W')">W</button>
+        <button class="button" onclick="appendToDisplay('E')">E</button>
+        <button class="button" onclick="appendToDisplay('R')">R</button>
+        <button class="button" onclick="appendToDisplay('T')">T</button>
+        <button class="button" onclick="appendToDisplay('Y')">Y</button>
+        <button class="button" onclick="appendToDisplay('U')">U</button>
+        <button class="button" onclick="appendToDisplay('I')">I</button>
+        <button class="button" onclick="appendToDisplay('O')">O</button>
+        <button class="button" onclick="appendToDisplay('P')">P</button>
+        <button class="button" onclick="appendToDisplay('A')">A</button>
+        <button class="button" onclick="appendToDisplay('S')">S</button>
+        <button class="button" onclick="appendToDisplay('D')">D</button>
+        <button class="button" onclick="appendToDisplay('F')">F</button>
+        <button class="button" onclick="appendToDisplay('G')">G</button>
+        <button class="button" onclick="appendToDisplay('H')">H</button>
+        <button class="button" onclick="appendToDisplay('J')">J</button>
+        <button class="button" onclick="appendToDisplay('J')">K</button>
+        <button class="button" onclick="appendToDisplay('L')">L</button>
+        <button class="button" onclick="appendToDisplay('Z')">Z</button>
+        <button class="button" onclick="appendToDisplay('X')">X</button>
+        <button class="button" onclick="appendToDisplay('C')">C</button>
+        <button class="button" onclick="appendToDisplay('V')">V</button>
+        <button class="button" onclick="appendToDisplay('B')">B</button>
+        <button class="button" onclick="appendToDisplay('N')">N</button>
+        <button class="button" onclick="appendToDisplay('M')">M</button>
+        <button class="button" onclick="clearDisplay('&#9003')">&#9003</button>
+        <button class="button" onclick="appendToDisplay('/')">/</button>
+        <button class="button" onclick="appendToDispla('.')">.</button>
+        <button class="button" onclick="appendToDisplay('&#128578')">&#128578</button>
+        <button class="button space">Space</button>
+        <button class="button" onclick="appendToDisplay">,</button>
+        <button class="button" onclick="appendToDisplay('@')">@</button>
+        <button class="button" onclick="appendToDisplay('?123')">?123</button>
+
+        <button class=" button send" onclick="appendToDisplay('Send')">Send</button> 
+    
+</div>
+    <script>
+        var disp = document.getElementById("display");
+
+        function appendToDisplay(value) {
+            disp.value+=value;
+        }
+        function clearDisplay() {
+            disp.value = "";
+        }
+    
+    
+    </script>
+</body>
+</body>
+</html>
